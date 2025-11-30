@@ -73,10 +73,10 @@ export default function App(){
       <div className="card">
         <h2>Paging Simulator</h2>
         <div className="controls">
-          <label>Capacity: <input type="number" min="1" value={capacity} onChange={e=>setCapacity(e.target.value)} /></label>
-          <label>Sequence Length: <input type="number" min="1" value={length} onChange={e=>{setLength(e.target.value);}} /></label>
-          <label>Max Page Value: <input type="number" min="0" value={maxVal} onChange={e=>setMaxVal(e.target.value)} /></label>
-          <button onClick={()=>{ setPages(randomPages(length, maxVal)); setResults(null); }}>Generate Random</button>
+          <label>Capacity: <input type="number" min="1" value={capacity} onChange={e=>setCapacity(Number(e.target.value))} /></label>
+          <label>Sequence Length: <input type="number" min="1" value={length} onChange={e=>setLength(Number(e.target.value))} /></label>
+          <label>Max Page Value: <input type="number" min="0" value={maxVal} onChange={e=>setMaxVal(Number(e.target.value))} /></label>
+          <button onClick={()=>{ setPages(randomPages(Number(length), Number(maxVal))); setResults(null); }}>Generate Random</button>
           <button onClick={handleRun}>Run All</button>
           <div style={{display:'flex',gap:8}}>
             <button onClick={()=>handleRunSingle('FIFO')}>Run FIFO</button>

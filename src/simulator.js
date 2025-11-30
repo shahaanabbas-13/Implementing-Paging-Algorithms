@@ -1,5 +1,3 @@
-// Paging simulator translated from the provided Java implementation.
-// Each algorithm returns an object { steps: [ { page, frames, status } ], hits, faults }
 
 function deepCopy(arr) { return arr.slice(); }
 
@@ -73,7 +71,6 @@ function implementOptimal(pages, capacity) {
       if (frames.length < capacity) {
         frames.push(p)
       } else {
-        // find victim whose next occurrence is farthest (or never)
         let farthestIndex = -1
         let victimIndex = -1
         for (let j = 0; j < frames.length; j++) {
@@ -149,7 +146,6 @@ function implementLFU(pages, capacity) {
         frames.push(p)
         freq.set(p, 1)
       } else {
-        // find min freq victim; tie-breaker FIFO (first in frames array)
         let minFreq = Infinity
         let victimIndex = -1
         for (let i = 0; i < frames.length; i++) {
