@@ -121,22 +121,17 @@ Use the performance summary grid to quickly compare all algorithms:
 
 ### Installation & Startup
 
-1. **Navigate to the project directory:**
-   ```bash
-   cd "/home/shahaan/Documents/Shahaan's Docs/Paging Simulator"
-   ```
-
-2. **Install dependencies:**
+1. **Install dependencies:**
    ```bash
    npm install
    ```
 
-3. **Start the development server:**
+2. **Start the development server:**
    ```bash
    npm run dev
    ```
 
-4. **Open in browser:**
+3. **Open in browser:**
    - The terminal will display a URL (typically `http://localhost:5173` or similar).
    - Open this URL in your web browser to start using the simulator.
 
